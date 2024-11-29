@@ -3,7 +3,285 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <title>Dashboard</title>
   </head>
-  <body></body>
+  <body>
+    <div class="dashboard">
+      <!-- Sidebar -->
+      <aside class="dashboard__sidebar">
+        <div class="sidebar__header">
+          <img src="./img/logo.svg" alt="" />
+          <h1 class="sidebar__title">
+            Dashboard <span class="sidebar__version">v.01</span>
+          </h1>
+        </div>
+        <nav class="sidebar__menu">
+          <ul class="menu">
+            <li class="menu__item">
+              <a href="#" class="menu__link">
+                <img src="./img/key-square.svg" alt="" />
+                Dashboard
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">
+                <img src="./img/3d-square.svg" alt="" />
+                Product <span class="menu__link__arrow">></span>
+              </a>
+            </li>
+            <li class="menu__item menu__item--active">
+              <a href="#" class="menu__link">
+                <img src="./img/user-square 1.svg" alt="" />
+                Customers <span class="menu__link__arrow">></span>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">
+                <img src="./img/wallet-money 2.svg" alt="" />
+                Income <span class="menu__link__arrow">></span>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">
+                <img src="./img/discount-shape 1.svg" alt="" />
+                Promote <span class="menu__link__arrow">></span>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">
+                <img src="./img/message-question 1.svg" alt="" />
+                Help <span class="menu__link__arrow">></span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="sidebar__footer">
+          <div class="user">
+            <img src="./img/puple.svg" alt="Evano" class="user__avatar" />
+            <div class="user__info">
+              <span class="user__name">Evano</span>
+              <span class="user__role">Project Manager</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="dashboard__content">
+        <header class="content__header">
+          <h2 class="header__title">
+            Hello Evano<span class="header__emoji">👋🏼,</span>
+          </h2>
+        </header>
+        <section class="content__main">
+          <div class="customers">
+            <div class="customers__header-container">
+              <div class="customers__header">
+                <h3 class="customers__title">All Customers</h3>
+                <p class="customers__subtitle">Active Members</p>
+              </div>
+
+              <div class="customers__search">
+                <div class="search__icon__container">
+                  <img src="./img/search.svg" alt="" />
+                </div>
+                <input type="text" class="search__input" placeholder="Search" />
+              </div>
+            </div>
+
+            <table class="customers__table">
+              <thead>
+                <tr class="table__row table__row--header">
+                  <th class="table__cell__header" data-label="Customer Name">
+                    Customer Name
+                  </th>
+                  <th class="table__cell__header" data-label="Company">
+                    Company
+                  </th>
+                  <th class="table__cell__header" data-label="Phone Number">
+                    Phone Number
+                  </th>
+                  <th class="table__cell__header" data-label="Email">Email</th>
+                  <th class="table__cell__header" data-label="Country">
+                    Country
+                  </th>
+                  <th
+                    class="table__cell__header cell__center"
+                    data-label="Status"
+                  >
+                    Status
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="table__row">
+                  <td class="table__cell" data-label="Customer Name">
+                    Jane Cooper
+                  </td>
+                  <td class="table__cell" data-label="Company">Microsoft</td>
+                  <td class="table__cell" data-label="Phone Number">
+                    (225) 555-0118
+                  </td>
+                  <td class="table__cell" data-label="Email">
+                    jane@microsoft.com
+                  </td>
+                  <td class="table__cell" data-label="Country">
+                    United States
+                  </td>
+                  <td
+                    class="table__cell table__cell--status-active"
+                    data-label="Status"
+                  >
+                    <button class="table__cell__button--status-active">
+                      Active
+                    </button>
+                  </td>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__cell" data-label="Customer Name">
+                    Jane Cooper
+                  </td>
+                  <td class="table__cell" data-label="Company">Microsoft</td>
+                  <td class="table__cell" data-label="Phone Number">
+                    (225) 555-0118
+                  </td>
+                  <td class="table__cell" data-label="Email">
+                    jane@microsoft.com
+                  </td>
+                  <td class="table__cell" data-label="Country">
+                    United States
+                  </td>
+                  <td
+                    class="table__cell table__cell--status-inactive"
+                    data-label="Status"
+                  >
+                    <button class="table__cell__button--status-inactive">
+                      Inactive
+                    </button>
+                  </td>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__cell" data-label="Customer Name">
+                    Jane Cooper
+                  </td>
+                  <td class="table__cell" data-label="Company">Microsoft</td>
+                  <td class="table__cell" data-label="Phone Number">
+                    (225) 555-0118
+                  </td>
+                  <td class="table__cell" data-label="Email">
+                    jane@microsoft.com
+                  </td>
+                  <td class="table__cell" data-label="Country">
+                    United States
+                  </td>
+                  <td
+                    class="table__cell table__cell--status-active"
+                    data-label="Status"
+                  >
+                    <button class="table__cell__button--status-active">
+                      Active
+                    </button>
+                  </td>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__cell" data-label="Customer Name">
+                    Jane Cooper
+                  </td>
+                  <td class="table__cell" data-label="Company">Microsoft</td>
+                  <td class="table__cell" data-label="Phone Number">
+                    (225) 555-0118
+                  </td>
+                  <td class="table__cell" data-label="Email">
+                    jane@microsoft.com
+                  </td>
+                  <td class="table__cell" data-label="Country">
+                    United States
+                  </td>
+                  <td
+                    class="table__cell table__cell--status-inactive"
+                    data-label="Status"
+                  >
+                    <button class="table__cell__button--status-inactive">
+                      Inactive
+                    </button>
+                  </td>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__cell" data-label="Customer Name">
+                    Jane Cooper
+                  </td>
+                  <td class="table__cell" data-label="Company">Microsoft</td>
+                  <td class="table__cell" data-label="Phone Number">
+                    (225) 555-0118
+                  </td>
+                  <td class="table__cell" data-label="Email">
+                    jane@microsoft.com
+                  </td>
+                  <td class="table__cell" data-label="Country">
+                    United States
+                  </td>
+                  <td
+                    class="table__cell table__cell--status-active"
+                    data-label="Status"
+                  >
+                    <button class="table__cell__button--status-active">
+                      Active
+                    </button>
+                  </td>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__cell" data-label="Customer Name">
+                    Jane Cooper
+                  </td>
+                  <td class="table__cell" data-label="Company">Microsoft</td>
+                  <td class="table__cell" data-label="Phone Number">
+                    (225) 555-0118
+                  </td>
+                  <td class="table__cell" data-label="Email">
+                    jane@microsoft.com
+                  </td>
+                  <td class="table__cell" data-label="Country">
+                    United States
+                  </td>
+                  <td
+                    class="table__cell table__cell--status-inactive"
+                    data-label="Status"
+                  >
+                    <button class="table__cell__button--status-inactive">
+                      Inactive
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="customers__pagination">
+              <span class="pagination__text"
+                >Showing data 1 to 8 of 256K entries</span
+              >
+              <div class="pagination__buttons">
+                <button class="pagination__button"><</button>
+                <button class="pagination__button pagination__button__active">
+                  1
+                </button>
+                <button class="pagination__button">2</button>
+                <button class="pagination__button">3</button>
+                <button class="pagination__button">4</button>
+                <span>...</span>
+                <button class="pagination__button">40</button>
+                <button class="pagination__button">></button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
 </html>
